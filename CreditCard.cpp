@@ -7,14 +7,24 @@
 **/
 
 #include "CreditCard.h"
+#include <iostream>
 
+using std::cout;;
+using std::cin;
+using std::endl;
 using std::string;
+
+CreditCard::CreditCard(){}
 
 CreditCard::CreditCard(string isr, string rt, string ccn){
     setIssuer(isr);
     setRewardsType(rt);
     setCreditCardName(ccn);
+    vector<double> transactionAmounts;
+    vector<int> transactionTypes;
 }
+
+CreditCard::~CreditCard(){}
 
 void CreditCard::setIssuer(string newIssuer){
     issuer = newIssuer;
@@ -43,4 +53,12 @@ void CreditCard::addTransactionType(int newTransactionType){
 void CreditCard::addTransaction(double newTransactionAmounts, int newTransactionType){
     addTransactionAmount(newTransactionAmounts);
     addTransactionType(newTransactionType);
+}
+
+double CreditCard::getTotalAmountSpent() const{
+    double totalTransanctionAmount=0;
+    for (double transanctionAmount: transactionAmounts){
+        totalTransanctionAmount += transanctionAmount;
+    }
+    return totalTransanctionAmount;
 }

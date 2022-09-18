@@ -25,7 +25,10 @@ class CreditCard{
         vector<int> transactionTypes;
 
     public:
+
+        CreditCard();
         CreditCard(string issuer, string rewardsType, string creditCardName);
+        ~CreditCard();
 
         void setIssuer(string newIssuer);
         string getIssuer(){ return issuer;}
@@ -46,15 +49,45 @@ class CreditCard{
 
         void addTransaction(double newTransactionAmounts, int newTransactionType);
         virtual double calculateRewards() = 0;
-};
 
+        double getTotalAmountSpent() const;
+};
 
 class WellsFargoAutograph: public CreditCard{
 
     public:
-        WellsFargoAutograph(string issuer="Wells Fargo", string rewardsType="miles", string creditCardName="Wells Fargo Autograph");
+        WellsFargoAutograph();
+        WellsFargoAutograph(string issuer, string rewardsType, string creditCardNam);
+        ~WellsFargoAutograph();
 
-        double calculateRewards();
+        virtual double calculateRewards();
+};
+
+class WellsFargoActiveCash: public CreditCard{
+    public:
+        WellsFargoActiveCash();
+        WellsFargoActiveCash(string issuer, string rewardsType, string creditCardNam);
+        ~WellsFargoActiveCash();
+
+        virtual double calculateRewards();
+};
+
+class DiscoverIT: public CreditCard{
+    public:
+        DiscoverIT();
+        DiscoverIT(string issuer, string rewardsType, string creditCardNam);
+        ~DiscoverIT();
+
+        virtual double calculateRewards();
+};
+
+class CapitalOneSavorOne: public CreditCard{
+    public:
+        CapitalOneSavorOne();
+        CapitalOneSavorOne(string issuer, string rewardsType, string creditCardNam);
+        ~CapitalOneSavorOne();
+
+        virtual double calculateRewards();
 };
 
 #endif

@@ -1,5 +1,5 @@
 /**
- * @file WellsFargoAutograph.cpp
+ * @file DiscoverIT.cpp
  * @author: Varis Nijat
  * CIS 554-M401 Object Oriented Programming in C++
  * Syracuse University
@@ -8,13 +8,13 @@
 
 #include "CreditCard.h"
 
-WellsFargoAutograph::WellsFargoAutograph(){}
+DiscoverIT::DiscoverIT(){}
 
-WellsFargoAutograph::WellsFargoAutograph(string isr, string rt, string ccn):CreditCard(isr, rt, ccn){}
+DiscoverIT::DiscoverIT(string isr, string rt, string ccn):CreditCard(isr, rt, ccn){}
 
-WellsFargoAutograph::~WellsFargoAutograph(){}
+DiscoverIT::~DiscoverIT(){}
 
-double WellsFargoAutograph::calculateRewards(){
+double DiscoverIT::calculateRewards(){
 
     double totalRewards = 0;
 
@@ -25,12 +25,12 @@ double WellsFargoAutograph::calculateRewards(){
 
         switch (transactionType)
         {
-        case (1 || 2 || 3 || 4 || 5 || 6):
-            totalRewards += (transactionAmount * 3);
+        case (1 || 7):
+            totalRewards += (transactionAmount * 0.05);
             break;
         
         default:
-            totalRewards += (transactionAmount * 3);
+            totalRewards += (transactionAmount * 0.01);
             break;
         }
     }
