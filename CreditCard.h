@@ -18,7 +18,7 @@ using std::vector;
 /**
  * Implementation of the Credit Card Calculator.
  * 
- * A Credit class has five protected data members
+ * A Credit Card class has five protected data members
  * - issuer: a string that represents the issuer of the credit card  
  * - rewardsType: a string that represents the rewards type. There are only two types
  *     of reward types, cash and miles.
