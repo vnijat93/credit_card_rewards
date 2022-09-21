@@ -66,7 +66,7 @@ int main(){
 void displaySummary(vector<CreditCard*> &ccPtrs){
 
     // cout some headers and set precisions
-    cout << "Rewards Summary: \n";
+    cout << "\n\nRewards Summary: \n\n";
     cout << fixed;
     cout << setprecision(2);
 
@@ -178,7 +178,7 @@ void recordTransactions(CreditCard *ccPtr){
         ccPtr->addTransaction(txnAmount, txnType);
 
         // ask user if they have more transactions to report
-        cout << "Do you have more transactions to report?(y/n)";
+        cout << "\nDo you have more transactions to report?(y/n)";
         cin >> hasMoreTransactions;
     }
 }
@@ -192,6 +192,6 @@ void printBannerMessage(){
     cout << "********************************************************\n"
          << "Use this credit card rewards calculator to calculate rewards "
          << "across all your credit cards. Use the following prompt to enter "
-         << "your transaction details.";
+         << "your transaction details.\n";
     cout << "********************************************************\n\n";
 }
