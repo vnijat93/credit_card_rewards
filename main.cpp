@@ -116,6 +116,7 @@ void displaySummary(vector<CreditCard*> &ccPtrs){
          << left << setw(16) << totalAmountSpent 
          << left << setw(16) << totalCashEarned
          << left << setw(16) << totalMilesEarned
+         << "\n\n"
          << endl;
 }
 
