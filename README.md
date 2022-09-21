@@ -39,7 +39,7 @@ classDiagram
         calculateRewards()
     }
 ```
-
+---
 
 ## Transaction Types
 
